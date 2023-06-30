@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    width: 100%;
+}
+
+.f_box {
+    display: flex;
+    align-items: center;
+    background-color: navy;
+    padding: 0px 35px;
+}
+
+.f_first_item {
+    margin-right: auto;
+    font-size: 40px;
+}
+
+.f_first_text {
+    text-decoration: none;
+    color: white;
+}
+
+.f_second_item {
+    text-decoration: none;
+    color: white;
+}
+
+.f_third_item {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #00bcd4;
+    transition: .4s;
+}
+
+.new_user {
+    text-align: center;
+}
+
+.log_in {
+    text-align: center;
+}
+
+.actions_button {
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    width: 400px;
+    margin: auto;
+    padding: 1rem 4rem;
+    font-weight: bold;
+    border: 2px solid orange;
+    background: orange;
+    color: #fff;
+    border-radius: 100vh;
+    transition: 0.5s;
+    margin-top: 30px;
+}
+
+.reservation_button {
+    text-decoration: none;
+    width: 400px;
+    margin-top: 20px;
+    padding: 1rem 4rem;
+    font-weight: bold;
+    border: 2px solid skyblue;
+    background: skyblue;
+    color: #fff;
+    border-radius: 100vh;
+}
+
+.logIn_signUp {
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    width: 400px;
+    margin: auto;
+    padding: 1rem 4rem;
+    font-weight: bold;
+    border: 2px solid #27acd9;
+    color: #27acd9;
+    border-radius: 100vh;
+    transition: 0.5s;
+    margin-top: 30px;
+}
+
+table th {
+    border-bottom: 1px solid black;
+    padding: 10px 60px;
+}
+
+table td {
+    border-bottom: 1px solid #dcdcdc;
+    padding: 30px 60px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.new_room {
+    text-align: center;
+}
+
+.notice {
+    background-color: #ccf;
+    padding: 5px;
+}

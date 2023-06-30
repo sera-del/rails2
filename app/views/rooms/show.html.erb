@@ -1,0 +1,50 @@
+<h3><%= link_to "←戻る", :back %></h3>
+
+<%= image_tag @room.img.thumb.url %>
+
+<%# 下記に予約機能をつける %>
+<div>
+ <%= form_with url: reservations_confirm_path do |f| %>
+  <table>
+  <%= f.hidden_field :room_id, value: @room.id %>
+
+     <tr>
+       <th><%= f.label :name, "施設名" %></th>
+       <td><%= @room.accommodation %></td>
+     </tr>
+ 
+     <tr>
+       <th><%= f.label :price, "値段" %></th>
+       <td><%= f.text_field :price, value: @room.price %></td>
+     </tr>
+ 
+     <tr>
+       <th><%= f.label :address, "住所" %></th>
+       <td><%= @room.address %></td>
+     </tr>
+ 
+     <tr>
+       <th><%= f.label :accommodation_detail, "施設紹介" %></th>
+       <td><%= @room.accommodation_detail %></td>
+     </tr>
+
+     <tr>
+       <th><%= f.label :check_in, "チェックイン" %></th>
+       <td><%= f.date_field :check_in %></td>
+     </tr>
+
+     <tr>
+       <th><%= f.label :check_out, "チェックアウト" %></th>
+       <td><%= f.date_field :check_out %></td>
+     </tr>
+
+     <tr>
+       <th><%= f.label :number_of_people, "人数" %></th>
+       <td><%= f.text_field :people %></td>
+     </tr>
+   </table>
+
+   <p><%= f.submit "予約する", class: "reservation_button" %></p>
+
+  <% end %>
+</div>

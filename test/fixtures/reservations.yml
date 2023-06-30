@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  img: MyString
+  accommodation: MyString
+  introduction: MyText
+  price: 1
+  check_in: 2023-06-27
+  check_out: 2023-06-27
+
+two:
+  img: MyString
+  accommodation: MyString
+  introduction: MyText
+  price: 1
+  check_in: 2023-06-27
+  check_out: 2023-06-27
