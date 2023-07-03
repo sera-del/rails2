@@ -18,7 +18,7 @@
  <tbody>
  <% @reservations.each do |reservation| %>
     <tr>
-     <td><%= image_tag reservation.room.img.thumb.url %></td>
+     <td><%= image_tag reservation.room.img.thumb.url, size: '100x100' %></td>
      <td><%= link_to reservation.room.accommodation, reservation.room %></td>
      <td><%= reservation.room.accommodation_detail %></td>
      <td><%= reservation.price %>円</td>

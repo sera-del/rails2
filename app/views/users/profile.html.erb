@@ -1,1 +1,24 @@
-<h1>プロフィールページ<h1>
+<h1><%= "#{current_user.username}" %>(ID<%= current_user.id %>)さんのプロフィールページ</h1>
+
+<table>
+ <tr>
+  <th>アイコン画像</th>
+  <td>
+   <% if current_user.user_img.present? %>
+    <%= image_tag current_user.user_img.image_url %>
+    <% else %>
+    <%= image_tag "account_icon.png", size: "40x40" %>
+   <% end %>
+  </td>
+ </tr>
+
+ <tr>
+  <th>名前</th>
+  <td><%= "#{current_user.username}" %></td>
+ </tr>
+
+ <tr>
+  <th>自己紹介</th>
+  <td><%= "#{current_user.introduction}" %></td>
+ </tr>
+</table>

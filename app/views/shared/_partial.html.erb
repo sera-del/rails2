@@ -1,0 +1,7 @@
+<div class="partial">
+ <%= form_with(url: search_rooms_path, local: true, method: :get ) do |f| %>
+    <%= f.text_field :search_area, placeholder: "エリア名を入力" %>
+    <%= f.text_field :search_keyword, placeholder: "キーワード名を入力" %>
+    <%= f.submit "検索" %>
+ <% end %>
+</div>

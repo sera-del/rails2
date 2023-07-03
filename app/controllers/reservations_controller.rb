@@ -9,15 +9,12 @@ class ReservationsController < ApplicationController
    @room = Room.find_by(params[:room_id])
    @day = (@reservation.check_out - @reservation.check_in).to_i
    @total = @day * @reservation.price * @reservation.people
-   binding.pry
   end
 
   def create
     @reservation = Reservation.new(reservation_room)
-    
-    binding.pry
     if @reservation.save
-      flash[:notice_reservation] = "施設を登録しました"
+      flash[:notice_reservation] = "施設を予約しました"
       redirect_to :reservations
     else
       render "confirm"

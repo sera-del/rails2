@@ -1,4 +1,6 @@
-<h3>予約内容の確認</h3>
+<h3 class="confirm_text">予約内容の確認</h3>
+
+<div class="confirm_content">
 
 <%= form_with model: @reservation do |f| %>
  <table>
@@ -8,27 +10,32 @@
 
   <tr>
    <th>チェックイン</th>
-   <td><%= f.date_field :check_in, value: @reservation.check_in %></td>
+   <td><%= @reservation.check_in %></td>
+   <%= f.hidden_field :check_in, value: @reservation.check_in %>
   </tr>
   
   <tr>
    <th>チェックアウト</th>
-   <td><%= f.date_field :check_out, value: @reservation.check_out %></td>
+   <td><%= @reservation.check_out %></td>
+   <%= f.hidden_field :check_out, value: @reservation.check_out %>
   </tr>
 
   <tr>
    <th>日数</th>
-   <td><%= f.text_field :day, value: @day %></td>
+   <td><%= @day %></td>
+   <%= f.hidden_field :day, value: @day %>
   </tr>
 
   <tr>
    <th>人数</th>
-   <td><%= f.text_field :people, value: @reservation.people %>人</td>
+   <td><%= @reservation.people %>人</td>
+   <%= f.hidden_field :people, value: @reservation.people %>
   </tr>
 
   <tr>
    <th>お支払い金額</th>
-   <td><%= f.text_field :price, value: @total %>円</td>
+   <td><%= @total %>円</td>
+   <%= f.hidden_field :price, value: @total %>
   </tr>
  </table>
 
@@ -39,3 +46,4 @@
   <p><%= link_to "キャンセル", :back, class: "logIn_signUp" %></p>
  </div>
 <% end %>
+</div>

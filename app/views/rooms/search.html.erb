@@ -1,10 +1,6 @@
-<% if flash[:notice_room] %>
- <p class="notice"><%= flash[:notice_room] %></p>
-<% end %>
-
 <%= render "shared/partial" %>
 
-<h3>【検索結果】<%= Room.count %>件が見つかりました。</h3>
+<h3>【検索結果】<%= @rooms.count %>件が見つかりました。</h3>
 
 <table>
    <thead>

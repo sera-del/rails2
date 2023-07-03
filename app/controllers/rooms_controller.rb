@@ -37,6 +37,17 @@ class RoomsController < ApplicationController
     @rooms = current_user.rooms
   end
 
+  #検索アクション
+  def search
+    if !params[:search_keyword].present? || params[:search_area].present?
+      @rooms = Room.where('address LIKE(?)', "%#{params[:search_area]}%")
+    elsif params[:search_keyword].present?
+      @rooms = Room.where('accommodation LIKE(?) OR accommodation_detail LIKE(?)', "%#{params[:search_keyword]}%", "%#{params[:search_keyword]}%")
+    else
+      @rooms = Room.all
+    end
+  end
+
   private
 
   def room_params

@@ -15,7 +15,7 @@ class ImageUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  #デフォルト画像の設定
+  #Roomのデフォルト画像の設定
   def default_url
     "hotel_img.png"
   end

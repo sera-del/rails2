@@ -15,10 +15,18 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
 
-  resources :rooms
+  resources :rooms do
+    collection do
+      get 'search'
+   end
+  end
+  
   resources :users
+  
   resources :reservations
+  
   resources :rooms do
     resources :reservations
   end
+
 end

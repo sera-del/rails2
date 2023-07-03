@@ -7,7 +7,7 @@ body {
     display: flex;
     align-items: center;
     background-color: navy;
-    padding: 0px 35px;
+    padding: 20px 35px;
 }
 
 .f_first_item {
@@ -90,6 +90,19 @@ body {
     margin-top: 30px;
 }
 
+.footer {
+    background-color: navy;
+    padding-top: 230px;
+    padding-bottom: 160px;
+    padding-left: 35px;
+}
+
+.footer_text {
+    color: white;
+    font-size: 55px;
+    text-decoration: none;
+}
+
 table th {
     border-bottom: 1px solid black;
     padding: 10px 60px;
@@ -111,4 +124,86 @@ table {
 .notice {
     background-color: #ccf;
     padding: 5px;
+}
+
+.partial {
+    background-color: gray;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.main_head {
+    text-align: center;
+}
+
+
+
+.recommendation {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.text_area {
+    text-decoration: underline orange;
+}
+
+.recommendation_area {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    gap: 77px;
+}
+
+.image_area {
+    height: 500px;
+    width: 300px;
+}
+
+.show_btn {
+    text-decoration: none;
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 220px;
+    padding: 10px 25px;
+    color: #FFF;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: rgb(149, 202, 252);
+    background: linear-gradient(270deg, rgba(149, 202, 252, 1) 0%, rgba(107, 182, 255, 1) 100%);
+}
+
+.back_btn {
+    text-decoration: none;
+    background: #eee;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    z-index: 0;
+    border-left: solid 5px #6bb6ff;
+}
+
+.show_content {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.confirm_content {
+    display: flex;
+    justify-content: center;
+}
+
+.confirm_text {
+    text-align: center;
 }
