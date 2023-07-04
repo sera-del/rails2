@@ -1,11 +1,15 @@
 <h1><%= "#{current_user.username}" %>(ID<%= current_user.id %>)さんのプロフィールページ</h1>
 
+<% if flash[:notice_chabge_profile] %>
+ <p class="notice"><%= flash[:notice_chabge_profile] %></p>
+<% end %>
+
 <table>
  <tr>
   <th>アイコン画像</th>
   <td>
    <% if current_user.user_img.present? %>
-    <%= image_tag current_user.user_img.image_url %>
+   <%= image_tag("user_images/#{current_user.user_img}") %>
     <% else %>
     <%= image_tag "account_icon.png", size: "40x40" %>
    <% end %>
@@ -22,3 +26,5 @@
   <td><%= "#{current_user.introduction}" %></td>
  </tr>
 </table>
+
+<p><%= link_to "プロフィール情報を編集する", edit_user_path(current_user) %></p>

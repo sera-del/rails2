@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_07_03_072426) do
+ActiveRecord::Schema.define(version: 2023_07_04_052957) do
 
   create_table "reservations", force: :cascade do |t|
     t.string "img"
@@ -53,6 +53,9 @@ ActiveRecord::Schema.define(version: 2023_07_03_072426) do
     t.string "username"
     t.text "introduction"
     t.string "user_img"
+    t.string "change_pass"
+    t.string "password"
+    t.string "password_confirmation"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
