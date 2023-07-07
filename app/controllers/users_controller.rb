@@ -1,19 +1,19 @@
 class UsersController < ApplicationController
   
   def account
-    @user_id = current_user.id
+    @user = current_user
   end
 
   def profile
-    @user_id = current_user.id
+    @user = current_user
   end
 
   def edit
-    @user = User.find(params[:id])
+    @user = current_user
   end
 
   def update
-    @user = User.find(params[:id])
+    @user = current_user
     if @user.update(params_profile)
       flash[:notice_chabge_profile] = "プロフィール情報を更新しました"
       redirect_to '/users/profile'

@@ -29,12 +29,11 @@ body {
     text-decoration: none;
     position: relative;
     display: inline-block;
-    font-weight: bold;
     padding: 0.25em 0.5em;
-    text-decoration: none;
-    color: #FFF;
-    background: #00bcd4;
+    background-color: #ff7757;
+    border-radius: 12px;
     transition: .4s;
+    color: #fff;
 }
 
 .new_user {
@@ -135,9 +134,37 @@ table {
 
 .main_head {
     text-align: center;
+    background-image: image-url('travel.jpg');
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 600px;
 }
 
+.form_area {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 450px;
+    margin-right: 450px;
+    background: hsla(0, 0%, 100%, .4);
+}
 
+.top_form {
+    width: 450px;
+    height: 50px;
+}
+
+.headline {
+    color: #fff;
+}
+
+.top_form_btn {
+    height: 50px;
+    width: 100px;
+    background-color: #ff7757;
+    border-radius: 12px;
+    color: #fff;
+    border: none;
+}
 
 .recommendation {
     margin-left: 40px;
@@ -146,6 +173,7 @@ table {
 
 .text_area {
     text-decoration: underline orange;
+    padding-top: 50px;
 }
 
 .recommendation_area {
@@ -206,4 +234,33 @@ table {
 
 .confirm_text {
     text-align: center;
+}
+
+.edit_btn {
+    text-decoration: none;
+    width: 120px;
+    padding: 1rem 4rem;
+    font-weight: bold;
+    border: 2px solid #27acd9;
+    background: #27acd9;
+    color: #fff;
+    border-radius: 100vh;
+    transition: 0.5s;
+}
+
+.edit_user {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.user_page {
+    text-decoration: none;
+    width: 120px;
+    padding: 1rem 4rem;
+    font-weight: bold;
+    border: 2px solid gray;
+    background: gray;
+    color: #fff;
+    border-radius: 100vh;
+    transition: 0.5s;
 }

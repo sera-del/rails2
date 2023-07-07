@@ -1,5 +1,17 @@
 <%= render "shared/partial" %>
 
+<% if flash[:alert_blank] %>
+ <p class="notice"><%= flash[:alert_blank] %></p>
+<% end %>
+
+<% if flash[:alert_day] %>
+ <p class="notice"><%= flash[:alert_day] %></p>
+<% end %>
+
+<% if flash[:alert_number] %>
+ <p class="notice"><%= flash[:alert_number] %></p>
+<% end %>
+
 <h3><%= link_to "←戻る", :back, class: "back_btn" %></h3>
 
 <div class="show_content">
@@ -20,7 +32,7 @@
  
      <tr>
        <th><%= f.label :price, "値段" %></th>
-       <td><%= @room.price %>円</td>
+       <td><%= @room.price %>円/日</td>
        <%= f.hidden_field :price, value: @room.price %>
      </tr>
  
@@ -35,18 +47,18 @@
      </tr>
 
      <tr>
-       <th><%= f.label :check_in, "チェックイン" %></th>
+       <th><%= f.label :check_in, "チェックイン（必須）" %></th>
        <td><%= f.date_field :check_in %></td>
      </tr>
 
      <tr>
-       <th><%= f.label :check_out, "チェックアウト" %></th>
+       <th><%= f.label :check_out, "チェックアウト（必須）" %></th>
        <td><%= f.date_field :check_out %></td>
      </tr>
 
      <tr>
-       <th><%= f.label :number_of_people, "人数" %></th>
-       <td><%= f.text_field :people %></td>
+       <th><%= f.label :number_of_people, "人数（必須）" %></th>
+       <td><%= f.number_field :people %></td>
      </tr>
     </table>
 

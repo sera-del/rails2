@@ -1,11 +1,11 @@
 <div class="main_head">
 
- <h1>Lakelandで新たな世界を旅しよう</h1>
+ <h1 class="headline">Lakelandで新たな世界を旅しよう</h1>
 
- <div>
+ <div class="form_area">
   <%= form_with(url: search_rooms_path, local: true, method: :get ) do |f| %>
-    <%= f.text_field :search_area, placeholder: "エリア名を入力" %>
-    <%= f.submit "検索" %>
+    <%= f.text_field :search_area, placeholder: "エリア名を入力", class: "top_form" %>
+    <%= f.submit "検索", class: "top_form_btn" %>
   <% end %>
  </div>
 
