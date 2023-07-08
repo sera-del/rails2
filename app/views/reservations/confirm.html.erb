@@ -10,13 +10,13 @@
 
   <tr>
    <th>チェックイン</th>
-   <td><%= @reservation.check_in %></td>
+   <td><%= @reservation.check_in.strftime('%Y/%m/%d') %></td>
    <%= f.hidden_field :check_in, value: @reservation.check_in %>
   </tr>
   
   <tr>
    <th>チェックアウト</th>
-   <td><%= @reservation.check_out %></td>
+   <td><%= @reservation.check_out.strftime('%Y/%m/%d') %></td>
    <%= f.hidden_field :check_out, value: @reservation.check_out %>
   </tr>
 
