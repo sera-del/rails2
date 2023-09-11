@@ -1,0 +1,45 @@
+<h2>アカウント情報の編集</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <table>
+  <div class="field">
+   <tr>
+    <th><%= f.label :email, "メールアドレス" %></th>
+    <td><%= f.email_field :email, autofocus: true, autocomplete: "email" %></td>
+   </tr>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="field">
+   <tr>
+    <th><%= f.label :password, "パスワード変更" %> <i>（変更したい場合）</i></th>
+    <td><%= f.password_field :password, autocomplete: "new-password", placeholder: "変更後パスワードを入力" %></td>
+   </tr>
+   </div>
+
+  <div class="field">
+   <tr>
+    <th><%= f.label :password_confirmation, "パスワード変更（確認）" %></th>
+    <td><%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "変更後パスワードを入力" %></td>
+   </tr>
+  </div>
+
+  <div class="field">
+   <tr>
+    <th><%= f.label :current_password, "現在のパスワード" %> <i>（変更には現在のパスワードが必要です）</i></th>
+    <td><%= f.password_field :current_password, autocomplete: "current-password", placeholder: "現在のパスワードを入力" %></td>
+   </tr>
+  </div>
+  </table>
+
+  <div class="actions">
+    <%= f.submit "変更する", class: "actions_button" %>
+    <%= link_to "キャンセル", :back, class: "logIn_signUp" %>
+  </div>
+<% end %>
+

@@ -1,0 +1,33 @@
+<% if flash[:notice_room] %>
+ <p class="notice"><%= flash[:notice_room] %></p>
+<% end %>
+
+<%= render "shared/partial" %>
+
+<h3>【検索結果】<%= Room.count %>件が見つかりました。</h3>
+
+<table>
+   <thead>
+     <tr>
+       <th>イメージ図</th>
+       <th>施設名</th>
+       <th>施設紹介</th>
+       <th>住所</th>
+       <th>料金/日</th>
+       <th></th>
+     </tr>
+   </thead>
+
+   <tbody>
+    <% @rooms.each do |room| %>
+     <tr>
+      <td><%= image_tag room.img.thumb.url, size: '100x100' %></td>
+      <td><%= room.accommodation %></td>
+      <td><%= room.accommodation_detail %></td>
+      <td><%= room.address %></td>
+      <td><%= room.price %>/日</td>
+      <td><%= link_to "詳細はこちら", room, class: "show_btn" %></td>
+     </tr>
+    <% end %>
+   </tbody>
+</table>

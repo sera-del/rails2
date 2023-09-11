@@ -1,0 +1,33 @@
+<h1><%= "#{current_user.username}" %>さんのプロフィールページ</h1>
+
+<% if flash[:notice_chabge_profile] %>
+ <p class="notice"><%= flash[:notice_chabge_profile] %></p>
+<% end %>
+
+<table>
+ <tr>
+  <th>アイコン画像</th>
+  <td>
+  <% if @user.user_img? %>
+      <%= image_tag @user.user_img.url, size: "40x40" %>
+       <% else %>
+       <%= image_tag "account_icon.png", size: "40x40" %>
+      <% end %>
+  </td>
+ </tr>
+
+ <tr>
+  <th>名前</th>
+  <td><%= "#{current_user.username}" %></td>
+ </tr>
+
+ <tr>
+  <th>自己紹介</th>
+  <td><%= "#{current_user.introduction}" %></td>
+ </tr>
+</table>
+
+<div class="edit_user">
+ <%= link_to "プロフィール情報を編集する", edit_user_path(current_user), class: "edit_btn" %>
+ <%= link_to "アカウントページ", users_account_path, class: "user_page" %>
+</div>

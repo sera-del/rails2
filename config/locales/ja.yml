@@ -1,0 +1,20 @@
+ ja:
+   activerecord:
+     models:
+       user: ユーザー
+       room: 施設
+     attributes:
+       user:
+         username: ユーザーネーム
+         email: メールアドレス
+         age: 年齢
+         introduction: 一言紹介
+         current password: 現在のパスワード
+       room:
+         accommodation: 施設名
+         accommodation_detail: 施設詳細
+         price: 金額
+         address: 住所
+         check_in: チェックイン
+         check_out: チェックアウト
+         people: 人数

@@ -1,0 +1,27 @@
+<h3>プロフィール情報の編集</h3>
+
+<%= form_with model: @user do |f| %>
+ <table>
+
+ <tr>
+  <th><%= f.label :user_img, "画像" %></th>
+  <td><%= f.file_field :user_img %></td>
+ </tr>
+
+ <tr>
+  <th><%= f.label :username, "名前" %></th>
+  <td><%= f.text_field :username %></td>
+ </tr>
+
+ <tr>
+  <th><%= f.label :introduction, "自己紹介" %></th>
+  <td><%= f.text_area :introduction %></td>
+ </tr>
+
+ </table>
+
+ <div>
+  <p><%= f.submit "保存", class: "actions_button" %></p>
+  <p><%= link_to "キャンセル", :back, class: "logIn_signUp" %></p>
+ </div>
+<% end %>

@@ -1,0 +1,266 @@
+body {
+    margin: 0;
+    width: 100%;
+}
+
+.f_box {
+    display: flex;
+    align-items: center;
+    background-color: navy;
+    padding: 20px 35px;
+}
+
+.f_first_item {
+    margin-right: auto;
+    font-size: 40px;
+}
+
+.f_first_text {
+    text-decoration: none;
+    color: white;
+}
+
+.f_second_item {
+    text-decoration: none;
+    color: white;
+}
+
+.f_third_item {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    background-color: #ff7757;
+    border-radius: 12px;
+    transition: .4s;
+    color: #fff;
+}
+
+.new_user {
+    text-align: center;
+}
+
+.log_in {
+    text-align: center;
+}
+
+.actions_button {
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    width: 400px;
+    margin: auto;
+    padding: 1rem 4rem;
+    font-weight: bold;
+    border: 2px solid orange;
+    background: orange;
+    color: #fff;
+    border-radius: 100vh;
+    transition: 0.5s;
+    margin-top: 30px;
+}
+
+.reservation_button {
+    text-decoration: none;
+    width: 400px;
+    margin-top: 20px;
+    padding: 1rem 4rem;
+    font-weight: bold;
+    border: 2px solid skyblue;
+    background: skyblue;
+    color: #fff;
+    border-radius: 100vh;
+}
+
+.logIn_signUp {
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    width: 400px;
+    margin: auto;
+    padding: 1rem 4rem;
+    font-weight: bold;
+    border: 2px solid #27acd9;
+    color: #27acd9;
+    border-radius: 100vh;
+    transition: 0.5s;
+    margin-top: 30px;
+}
+
+.footer {
+    background-color: navy;
+    padding-top: 230px;
+    padding-bottom: 160px;
+    padding-left: 35px;
+}
+
+.footer_text {
+    color: white;
+    font-size: 55px;
+    text-decoration: none;
+}
+
+table th {
+    border-bottom: 1px solid black;
+    padding: 10px 60px;
+}
+
+table td {
+    border-bottom: 1px solid #dcdcdc;
+    padding: 30px 60px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.new_room {
+    text-align: center;
+}
+
+.notice {
+    background-color: #ccf;
+    padding: 5px;
+}
+
+.partial {
+    background-color: gray;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.main_head {
+    text-align: center;
+    background-image: image-url('travel.jpg');
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 600px;
+}
+
+.form_area {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 450px;
+    margin-right: 450px;
+    background: hsla(0, 0%, 100%, .4);
+}
+
+.top_form {
+    width: 450px;
+    height: 50px;
+}
+
+.headline {
+    color: #fff;
+}
+
+.top_form_btn {
+    height: 50px;
+    width: 100px;
+    background-color: #ff7757;
+    border-radius: 12px;
+    color: #fff;
+    border: none;
+}
+
+.recommendation {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.text_area {
+    text-decoration: underline orange;
+    padding-top: 50px;
+}
+
+.recommendation_area {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    gap: 77px;
+}
+
+.image_area {
+    height: 500px;
+    width: 300px;
+}
+
+.show_btn {
+    text-decoration: none;
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 220px;
+    padding: 10px 25px;
+    color: #FFF;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: rgb(149, 202, 252);
+    background: linear-gradient(270deg, rgba(149, 202, 252, 1) 0%, rgba(107, 182, 255, 1) 100%);
+}
+
+.back_btn {
+    text-decoration: none;
+    background: #eee;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+    z-index: 0;
+    border-left: solid 5px #6bb6ff;
+}
+
+.show_content {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.confirm_content {
+    display: flex;
+    justify-content: center;
+}
+
+.confirm_text {
+    text-align: center;
+}
+
+.edit_btn {
+    text-decoration: none;
+    width: 120px;
+    padding: 1rem 4rem;
+    font-weight: bold;
+    border: 2px solid #27acd9;
+    background: #27acd9;
+    color: #fff;
+    border-radius: 100vh;
+    transition: 0.5s;
+}
+
+.edit_user {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.user_page {
+    text-decoration: none;
+    width: 120px;
+    padding: 1rem 4rem;
+    font-weight: bold;
+    border: 2px solid gray;
+    background: gray;
+    color: #fff;
+    border-radius: 100vh;
+    transition: 0.5s;
+}
